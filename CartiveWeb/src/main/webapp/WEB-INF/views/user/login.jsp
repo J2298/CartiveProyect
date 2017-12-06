@@ -18,7 +18,7 @@
   			<div class="demo">
     			<div class="login">
       				<div class="login__check"></div>
-      					<form method='post'>
+      					<form method='post' action="login">
 	      					<div class="login__form">
 	        					<div class="login__row">
 	          						<svg class="login__icon name svg-icon" viewBox="0 0 20 20">

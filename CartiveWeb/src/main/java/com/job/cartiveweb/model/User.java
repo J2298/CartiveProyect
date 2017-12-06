@@ -5,6 +5,8 @@ public class User {
 	private Long id;
     private String username;
     private String password;
+    private String nombres;
+    private String apellidos;
 
     public Long getId() {
         return id;
@@ -32,13 +34,28 @@ public class User {
 
 
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+    public String getNombres() {
+		return nombres;
+	}
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nombres=" + nombres
+				+ ", apellidos=" + apellidos + "]";
+	}
+
+	
 
 }

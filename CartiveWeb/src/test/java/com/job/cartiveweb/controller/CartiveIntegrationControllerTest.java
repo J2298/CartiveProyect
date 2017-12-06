@@ -52,8 +52,8 @@ public class CartiveIntegrationControllerTest {
                 .andExpect(view().name("web/detalle"))
                 .andExpect(forwardedUrl("/WEB-INF/views/web/detalle.jsp"))
                 .andExpect(model().attribute("via", hasProperty("id", is(2))))
-                .andExpect(model().attribute("via", hasProperty("destino", is("huancayo"))))
-                .andExpect(model().attribute("via", hasProperty("horapartida", is("08:00 AM"))))
+                .andExpect(model().attribute("via", hasProperty("destino", is("arequipa"))))
+                .andExpect(model().attribute("via", hasProperty("horapartida", is("9:00 AM"))))
                 .andExpect(model().attribute("via", hasProperty("numerotickets", is(40))))
                 .andExpect(model().attribute("via", hasProperty("precio", is(20))))
             ;

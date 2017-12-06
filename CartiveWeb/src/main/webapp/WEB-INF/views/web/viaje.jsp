@@ -67,7 +67,7 @@
 		            	<a href="#"><img class="card-img-top" src="./resources/images/emp/${via.empresa.imagen}" alt=""></a>
 		            	<div class="card-body">
 		              		<h4 class="card-title">
-		                		<a href="<%=request.getContextPath()%>/viaje/detalle/${via.id}"">${via.empresa.nombre}</a>
+		                		<a href="<%=request.getContextPath()%>/viaje/detalle/${via.id}">${via.empresa.nombre}</a>
 		              		</h4>
 		              		<p class="card-text">${via.destino}</p>
 		              		<p class="card-text">${via.fechapartida}</p>		              	

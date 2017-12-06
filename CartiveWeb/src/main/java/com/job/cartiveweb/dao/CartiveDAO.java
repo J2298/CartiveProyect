@@ -27,6 +27,3 @@ public interface CartiveDAO {
 //	Employee validate(String idEmployee, String clave) throws LoginException, DAOException;
 
 }
-
-
-

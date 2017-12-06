@@ -157,5 +157,3 @@ public class Viaje {
 		// TODO Auto-generated constructor stub
 	}
 }
-
-

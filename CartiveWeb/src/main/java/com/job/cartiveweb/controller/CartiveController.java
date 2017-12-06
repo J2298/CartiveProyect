@@ -31,7 +31,7 @@ public class CartiveController {
 
 	
 	
-	@GetMapping("/")	
+	@GetMapping("/inicio")	
 	public ModelAndView index(@ModelAttribute("SpringWeb") Viaje viaje, ModelMap model) {
 		
 		ModelAndView modelandview = new ModelAndView("web/cartive", "command", viaje);

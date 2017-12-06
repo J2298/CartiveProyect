@@ -58,10 +58,10 @@ public class CartiveDAOTest {
 
 			Assert.assertNotNull(via);
 
-			Assert.assertEquals("huancayo", via.getDestino());
-			Assert.assertEquals("barcelona", via.getEmpresa().getNombre());
+			Assert.assertEquals("arequipa", via.getDestino());
+			Assert.assertEquals("Flores", via.getEmpresa().getNombre());
 			Assert.assertEquals(20, via.getPrecio());
-			Assert.assertEquals("08:00 AM", via.getHorapartida());
+			Assert.assertEquals("9:00 AM", via.getHorapartida());
 
 			logger.info(via.toString());
 

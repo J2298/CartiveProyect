@@ -28,13 +28,13 @@ public class LoginController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-//	@GetMapping("user/login")
-//	public String main() {
-//		
-//		 logger.info("Devolviendo vista Login");
-//			
-//		return "redirect:user/login";
-//	}
+	@GetMapping("/")
+	public String main() {
+		
+		 logger.info("Devolviendo vista Login");
+			
+		return "redirect:/login";
+	}
 	
 	@GetMapping("/login")
 	public String preLogin() {
@@ -74,7 +74,8 @@ public class LoginController {
     	             logger.info("responseMessage: " + responseMessage);
     	             logger.info("Login correcto");
     	             httpSession.setAttribute("usuario",responseMessage.getUsername());
-    	             vista= "redirect:/";
+    	             httpSession.setAttribute("alluser", responseMessage);
+    	             vista= "redirect:/inicio";
     	             
     	         } else 
     	         {

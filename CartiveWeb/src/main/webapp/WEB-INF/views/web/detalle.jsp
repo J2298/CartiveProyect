@@ -10,7 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-		<link rel="stylesheet" href="./resources/viaje.css">
+		<link rel="stylesheet" href="../../resources/viaje.css">
              	
         <title>Cartive | Viajes</title>
          
@@ -61,23 +61,23 @@
        
        <div class="container">
        	<div class="row">
-       		<c:forEach var="via" items="${viajes}">
        			<div class="col-lg-4 col-sm-6 portfolio-item">
+		        	<div class="col-lg-4 col-sm-6 portfolio-item">
 		        	<div class="card h-100">
-		            	<a href="#"><img class="card-img-top" src="./resources/images/pro2.jpg" alt=""></a>
+		            	<a href="#"><img class="card-img-top" src="../../resources/images/emp/${via.empresa.imagen}" alt=""></a>
 		            	<div class="card-body">
 		              		<h4 class="card-title">
-		                		<a href="#">Promo Familiar</a>
+		                		<a href="<%=request.getContextPath()%>/viaje/detalle/${via.id}">${via.empresa.nombre}</a>
 		              		</h4>
 		              		<p class="card-text">${via.destino}</p>
 		              		<p class="card-text">${via.fechapartida}</p>		              	
 		              		<p class="card-text">${via.numeroticketsdisponibles}</p>
-		              		<p class="card-text">${via.horaviaje}</p>
+		              		<p class="card-text">${via.horapartida}</p>
 		              		
 		            	</div>
 		          	</div>
-		        </div>
-		    </c:forEach>
+		          	</div>
+		          	</div>
 		</div>
 	   </div>
 	<br/>
