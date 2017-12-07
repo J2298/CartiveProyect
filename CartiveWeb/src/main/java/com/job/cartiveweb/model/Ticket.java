@@ -10,6 +10,11 @@ public class Ticket {
 	int asiento_id;
 	int usuario_id;
 	
+	Viaje viaje=new Viaje();
+	
+	Asiento asiento=new Asiento();
+	
+	User user=new User();
 	
 	public int getId() {
 		return id;
@@ -40,6 +45,26 @@ public class Ticket {
 	}
 	public void setUsuario_id(int usuario_id) {
 		this.usuario_id = usuario_id;
+	}
+	
+	
+	public Viaje getViaje() {
+		return viaje;
+	}
+	public void setViaje(Viaje viaje) {
+		this.viaje = viaje;
+	}
+	public Asiento getAsiento() {
+		return asiento;
+	}
+	public void setAsiento(Asiento asiento) {
+		this.asiento = asiento;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	@Override
 	public String toString() {

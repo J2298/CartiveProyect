@@ -194,8 +194,8 @@ public class CartiveDAOImpl implements CartiveDAO {
 	
 	@Override
 	public List<Ticket> findTicket(int ticket_id) throws DAOException, EmptyResultException {
-
-		String query = "SELECT fecha_vencimiento, viaje_id, asiento_id, usuario_id FROM tickets WHERE usuario_id = ?";
+		String query = "SELECT v.*, a.*, u.*, t.* FROM viajes v JOIN tickets t on v.id = t.viaje_id JOIN asientos a on a.id = t.asiento_id JOIN usuarios u on u.id = t.usuario_id WHERE t.usuario_id = ?";
+		//String query = "SELECT fecha_vencimiento, viaje_id, asiento_id, usuario_id FROM tickets WHERE usuario_id = ?";
 
 		Object[] params = new Object[] { ticket_id };
 

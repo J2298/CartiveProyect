@@ -56,6 +56,12 @@
 							<th>Viaje ID</th>
 							<th>Asiento ID</th>
 							<th>Usuario ID</th>
+							<th>Num asiento</th>
+							<th>Destino</th>
+							<th>Fecha Partida</th>
+							<th>Hora partida</th>
+							<th>Nombres</th>
+							<th>Apellidos</th>
 							
 						</tr>
 					</thead>
@@ -66,6 +72,12 @@
 								<td>${t.viaje_id}</td>
 								<td>${t.asiento_id}</td>
 								<td>${t.usuario_id}</td>
+								<td>${t.asiento.num_asiento}</td>
+								<td>${t.viaje.destino}</td>
+								<td>${t.viaje.fechapartida}</td>
+								<td>${t.viaje.horapartida}</td>
+								<td>${t.user.nombres}</td>
+								<td>${t.user.apellidos}</td>
 						</c:forEach>
 					</tbody>
 				</table>
