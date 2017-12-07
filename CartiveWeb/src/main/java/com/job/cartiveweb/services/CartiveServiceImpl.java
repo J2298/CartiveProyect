@@ -39,9 +39,9 @@ public class CartiveServiceImpl implements CartiveService {
 	}
 	
 	@Override
-	public Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException {
+	public List<Ticket> findTicket(int ticket_id) throws DAOException, EmptyResultException {
 		
-		Ticket ti = cartiveDAO.findTicket(ticket_id);
+		List<Ticket> ti = cartiveDAO.findTicket(ticket_id);
 
 		return ti;
 	}

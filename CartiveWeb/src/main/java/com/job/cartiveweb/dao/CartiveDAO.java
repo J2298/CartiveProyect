@@ -21,7 +21,7 @@ public interface CartiveDAO {
 //
 //	List<Employee> findAllEmployees() throws DAOException, EmptyResultException;
 	
-	Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException;
+	List<Ticket> findTicket(int ticket_id) throws DAOException, EmptyResultException;
 
 	List<Viaje> findViajeByDestino(String desnom, String fecha) throws DAOException, EmptyResultException;
 

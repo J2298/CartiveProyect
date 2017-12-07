@@ -74,6 +74,7 @@ public class LoginController {
     	             logger.info("responseMessage: " + responseMessage);
     	             logger.info("Login correcto");
     	             httpSession.setAttribute("usuario",responseMessage.getUsername());
+    	             httpSession.setAttribute("uid", responseMessage.getId());
     	             httpSession.setAttribute("alluser", responseMessage);
     	             vista= "redirect:/inicio";
     	             

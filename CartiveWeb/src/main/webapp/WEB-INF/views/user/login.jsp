@@ -9,8 +9,9 @@
   		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 		<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 		<link rel="stylesheet" href="./resources/login.css">
+		<link rel="shortcut icon" type="image/x-icon" href="./resources/images/logo-c.png" />
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script  src="./resources/login.js"></script>
+		<script src="./resources/login.js"></script>
 	</head>
 		
 	<body>

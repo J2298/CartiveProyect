@@ -31,8 +31,9 @@ public class CartiveController {
 	
 	@GetMapping("/inicio")	
 	public ModelAndView index(@ModelAttribute("SpringWeb") Viaje viaje, ModelMap model) {
-		
+		User user = new User();
 		ModelAndView modelandview = new ModelAndView("web/cartive", "command", viaje);
+		logger.info("as+"+ user.getId());
 
 		return modelandview;
 	}
@@ -97,17 +98,16 @@ public class CartiveController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/mistickets")
-	public String list(@ModelAttribute("tickets") Ticket ti, ModelMap model)  {
+	@GetMapping("/mistickets/{uid}")
+	public String list(@PathVariable int uid, @ModelAttribute("tickets") User user, ModelMap model)  {
 
 		
-		User user = new User();
-		//Ticket ti = new Ticket();
+//		User user = new User();
+//		Ticket ti = new Ticket();
 
 		try {
-			model.addAttribute("ti", cartiveService.findTicket(user.getId()));
-			
-			logger.info(ti.toString());
+		 model.addAttribute("ti", cartiveService.findTicket(uid));
+			logger.info("as" + uid);
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 			model.addAttribute("message", e.getMessage());

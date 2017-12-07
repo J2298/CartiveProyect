@@ -10,7 +10,7 @@ public class TicketMapper implements RowMapper<Ticket>{
 
 	public Ticket mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Ticket ti = new Ticket();
-		ti.setId(rs.getInt("id"));
+	//	ti.setId(rs.getInt("id"));
 		ti.setFecha_vencimiento(rs.getDate("fecha_vencimiento"));
 		ti.setViaje_id(rs.getInt("viaje_id"));
 		ti.setAsiento_id(rs.getInt("asiento_id"));

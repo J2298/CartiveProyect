@@ -25,7 +25,7 @@ public interface CartiveService {
 	
 	Viaje findViaje(int id) throws DAOException, EmptyResultException;
 	
-	Ticket findTicket(int id) throws DAOException, EmptyResultException;
+	List<Ticket> findTicket(int id) throws DAOException, EmptyResultException;
 
 
 

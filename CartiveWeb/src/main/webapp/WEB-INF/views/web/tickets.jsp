@@ -12,7 +12,7 @@
        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 		<link rel="stylesheet" href="./resources/viaje.css">
              	
-        <title>Cartive | Viajes</title>
+        <title>Cartive | Tickets</title>
          
     </head>
     <body>
@@ -40,46 +40,40 @@
 		</nav>
 		<br>
 		<br>	<br>	<br>	
-		<div class="row" >
-			<div class="col-sm-4">
-				<a href="#">
-				<!-- <img alt="" src=""> -->
-            	</a>
-          	</div>
-          	<div class="col-sm-4">
-            	<a href="#">
-              		<p>Origen: Lima</p>
-            	</a>
-          	</div>
-          	<div class="col-sm-4">
-            	<a href="#">
-         		<p>Destino:  ${des}</p>
-            	</a>
-          	</div>
-       </div>
+		
        <br/>
        
-       <div class="container">
-       	<div class="row">
-       		<c:forEach var="via" items="${viajes}">
-       			<div class="col-lg-4 col-sm-6 portfolio-item">
-		        	<div class="card h-100">
-		            	<a href="#"><img class="card-img-top" src="./resources/images/emp/${via.empresa.imagen}" alt=""></a>
-		            	<div class="card-body">
-		              		<h4 class="card-title">
-		                		<a href="<%=request.getContextPath()%>/viaje/detalle/${via.id}">${via.empresa.nombre}</a>
-		              		</h4>
-		              		<p class="card-text">${via.destino}</p>
-		              		<p class="card-text">${via.fechapartida}</p>		              	
-		              		<p class="card-text">${via.numeroticketsdisponibles}</p>
-		              		<p class="card-text">${via.horapartida}</p>
-		              		
-		            	</div>
-		          	</div>
-		        </div>
-		    </c:forEach>
+       <div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-8">
+				<h4 class="text-center">Employees</h4>
+				
+				<br/> 
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Fecha</th>
+							<th>Viaje ID</th>
+							<th>Asiento ID</th>
+							<th>Usuario ID</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="t" items="${ti}">
+							<tr>
+								<td>${t.fecha_vencimiento}</td>
+								<td>${t.viaje_id}</td>
+								<td>${t.asiento_id}</td>
+								<td>${t.usuario_id}</td>
+						</c:forEach>
+					</tbody>
+				</table>
+
+			</div>
+			<font color="red">${message}</font>
 		</div>
-	   </div>
+	</div>
 	<br/>
 	
 	

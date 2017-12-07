@@ -193,7 +193,7 @@ public class CartiveDAOImpl implements CartiveDAO {
 	}
 	
 	@Override
-	public Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException {
+	public List<Ticket> findTicket(int ticket_id) throws DAOException, EmptyResultException {
 
 		String query = "SELECT fecha_vencimiento, viaje_id, asiento_id, usuario_id FROM tickets WHERE usuario_id = ?";
 
@@ -201,10 +201,9 @@ public class CartiveDAOImpl implements CartiveDAO {
 
 		try {
 
-			Ticket ti = (Ticket) jdbcTemplate.queryForObject(query, params, new TicketMapper());
+			List<Ticket> ti = jdbcTemplate.query(query, params, new TicketMapper());
 			//
 			return ti;
-			//return null;
 
 		} catch (EmptyResultDataAccessException e) {
 			throw new EmptyResultException();
