@@ -15,6 +15,7 @@ import com.job.cartiveweb.dao.jdbc.CartiveDAOImpl;
 import com.job.cartiveweb.exception.DAOException;
 import com.job.cartiveweb.exception.EmptyResultException;
 import com.job.cartiveweb.mapper.ViajeMapper;
+import com.job.cartiveweb.model.Ticket;
 import com.job.cartiveweb.model.Viaje;
 
 @Service
@@ -35,6 +36,14 @@ public class CartiveServiceImpl implements CartiveService {
 		Viaje via = cartiveDAO.findViaje(viaje_id);
 
 		return via;
+	}
+	
+	@Override
+	public Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException {
+		
+		Ticket ti = cartiveDAO.findTicket(ticket_id);
+
+		return ti;
 	}
 //	@Override
 //	public Employee find(int employee_id) throws DAOException, EmptyResultException {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.job.cartiveweb.exception.DAOException;
 import com.job.cartiveweb.exception.EmptyResultException;
+import com.job.cartiveweb.model.Ticket;
 import com.job.cartiveweb.model.Viaje;
 
 public interface CartiveDAO {
@@ -19,6 +20,8 @@ public interface CartiveDAO {
 //	Employee findEmployeeByLogin(String login) throws DAOException, EmptyResultException;
 //
 //	List<Employee> findAllEmployees() throws DAOException, EmptyResultException;
+	
+	Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException;
 
 	List<Viaje> findViajeByDestino(String desnom, String fecha) throws DAOException, EmptyResultException;
 

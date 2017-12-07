@@ -27,7 +27,7 @@
 			        	<a class="nav-link" style="color:white" href="#"><i class="fa fa-file-text-o"></i> Imprimir Pasaje</a>
 			      	</li>
 			      	<li class="nav-item">
-			        	<a class="nav-link" style="color:white" href="#"><i class="fa fa-ticket"></i> Mis Tickets</a>
+			        	<a class="nav-link" style="color:white" href="<%=request.getContextPath()%>/mistickets"><i class="fa fa-ticket"></i> Mis Tickets</a>
 			      	</li>
 			      	<li class="nav-item">
 			        	<a class="nav-link" style="color:white" href="#"><i class="fa fa-user-o"></i> Bienvenido ${alluser.nombres} ${alluser.apellidos}</a>

@@ -14,13 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.job.cartiveweb.exception.DAOException;
+import com.job.cartiveweb.model.Ticket;
+import com.job.cartiveweb.model.User;
 import com.job.cartiveweb.model.Viaje;
 import com.job.cartiveweb.services.CartiveService;
 
-
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class CartiveController {
 
@@ -99,4 +97,26 @@ public class CartiveController {
 		return modelAndView;
 	}
 	
+	@GetMapping("/mistickets")
+	public String list(@ModelAttribute("tickets") Ticket ti, ModelMap model)  {
+
+		
+		User user = new User();
+		//Ticket ti = new Ticket();
+
+		try {
+			model.addAttribute("ti", cartiveService.findTicket(user.getId()));
+			
+			logger.info(ti.toString());
+		} catch (Exception e) {
+			logger.info(e.getMessage());
+			model.addAttribute("message", e.getMessage());
+
+			e.printStackTrace();
+
+		}
+
+		return "web/tickets";
+	
+}
 }

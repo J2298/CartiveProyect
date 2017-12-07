@@ -12,8 +12,9 @@ import org.springframework.stereotype.Repository;
 import com.job.cartiveweb.dao.CartiveDAO;
 import com.job.cartiveweb.exception.DAOException;
 import com.job.cartiveweb.exception.EmptyResultException;
-
+import com.job.cartiveweb.mapper.TicketMapper;
 import com.job.cartiveweb.mapper.ViajeMapper;
+import com.job.cartiveweb.model.Ticket;
 import com.job.cartiveweb.model.Viaje;
 
 @Repository
@@ -181,6 +182,28 @@ public class CartiveDAOImpl implements CartiveDAO {
 			Viaje via = (Viaje) jdbcTemplate.queryForObject(query, params, new ViajeMapper());
 			//
 			return via;
+			//return null;
+
+		} catch (EmptyResultDataAccessException e) {
+			throw new EmptyResultException();
+		} catch (Exception e) {
+			logger.info("Error: " + e.getMessage());
+			throw new DAOException(e.getMessage());
+		}
+	}
+	
+	@Override
+	public Ticket findTicket(int ticket_id) throws DAOException, EmptyResultException {
+
+		String query = "SELECT fecha_vencimiento, viaje_id, asiento_id, usuario_id FROM tickets WHERE usuario_id = ?";
+
+		Object[] params = new Object[] { ticket_id };
+
+		try {
+
+			Ticket ti = (Ticket) jdbcTemplate.queryForObject(query, params, new TicketMapper());
+			//
+			return ti;
 			//return null;
 
 		} catch (EmptyResultDataAccessException e) {
