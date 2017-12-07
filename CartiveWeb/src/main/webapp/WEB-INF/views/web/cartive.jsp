@@ -10,8 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 		<link rel="stylesheet" href="./resources/cartive.css">
-		<link rel="shortcut icon" type="image/x-icon" href="./resources/images/logo-c.png" />
-             	
+		<link rel="shortcut icon" type="image/x-icon" href="./resources/images/logo-c.png" /> 	
         <title>Cartive | Principal</title>
     </head>
     
@@ -33,7 +32,7 @@
 			        	<a class="nav-link" style="color:white" href="#"><i class="fa fa-user-o"></i> Bienvenido ${alluser.nombres} ${alluser.apellidos}</a>
 			      	</li>
 			      	<li class="nav-item">
-			        	<a class="nav-link" style="color:white" href="<%=request.getContextPath()%>/register"><i class="fa fa-sign-out"></i> Cerrar Sesion</a>
+			        	<a class="nav-link" style="color:white" href="<%=request.getContextPath()%>/login"><i class="fa fa-sign-out"></i> Cerrar Sesion</a>
 			      	</li>
     			</ul>
   			</div>
@@ -42,7 +41,7 @@
 		<div class="callout">
 			<div class="text-vertical-center">
         		<div align="center" id="titulo" >
-        			<h1 class="textstyle">Viajes donde viajes, viaja con <img src="./resources/images/logo.png" height="58" width="130"></img></h1>
+        			<h1 class="textstyle">Viajes donde viajes, viaja con <img src="./resources/images/logo.png" height="50" width="130"></img></h1>
 					<div align="center" id="buscador">
 						<h3 class="textstyle">Buscar pasaje</h3>
 						<form:form method="post" align="center" class="form-inline" action="/cartiveweb/viaje">
